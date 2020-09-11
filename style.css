@@ -1,0 +1,61 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+	-moz-appearance:textfield; /* Firefox */
+}
+
+#container {
+	margin: 20px;
+	text-align: center;
+	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+.cell {
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	margin: 1px;
+	font-size: 18px;
+	border: 1px solid #7F8C8D;
+}
+.cell-readonly {
+	background-color: #E5E4E2;
+}
+.cell-wrong {
+	background-color: #FF8282 ;
+}
+.cell-wrong-border {
+	background-color: #FF4F4F; 
+	border: 1px solid red;
+}
+
+#cell-2, #cell-5, #cell-11, #cell-14, #cell-20, #cell-23, #cell-29, #cell-32, #cell-38, #cell-41, #cell-47, #cell-50, #cell-56, #cell-59, #cell-65, #cell-68, #cell-74, #cell-77 {
+	margin-right: 7px;
+}
+
+#cell-18, #cell-19, #cell-20, #cell-21, #cell-22, #cell-23, #cell-24, #cell-25, #cell-26, #cell-45 {
+	margin-bottom: 7px;
+}
+
+.button {
+	border: 1px solid;
+	text-align: center;
+	padding: 5px 10px;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 18px;
+}
+.button:hover {
+	background-color: #D1D0CE;
+}
+
+#status {
+	font-weight: bold;
+}
