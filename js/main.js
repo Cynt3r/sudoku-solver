@@ -14,12 +14,12 @@ function solve() {
 
 	if (is_valid(grid))  {
 		grid = find_solution(grid);
-		status = (is_completed(grid)) ? 'Vyřešeno' : 'Nelze vyřešit';
+		status = (is_completed(grid)) ? 'Solved' : 'Not solvable';
 		document.getElementById('status').innerHTML = status;
 		write_grid(grid, false);
 	}
 	else {
-		document.getElementById('status').innerHTML = 'Zadání není validní';
+		document.getElementById('status').innerHTML = 'Input is not valid';
 	}
 }
 
@@ -41,7 +41,7 @@ function validate_cells() {
 	for (var i = 0; i < 81; i++) {
 		if (!validate_cell_inner(i)) document.getElementById('cell-'+i).classList.add('cell-wrong-border');
 	}
-	if (is_completed(read_grid())) document.getElementById('status').innerHTML = 'Vyřešeno';
+	if (is_completed(read_grid())) document.getElementById('status').innerHTML = 'Solved';
 }
 
 function reset() {
